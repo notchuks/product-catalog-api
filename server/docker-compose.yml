@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  blame-tom:
+    container_name: blame-tom
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    build:
+      context: ./
+    ports:
+      - 1337:1337
